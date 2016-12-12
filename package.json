@@ -1,0 +1,37 @@
+{
+  "name": "masstodon-spa",
+  "version": "0.0.1",
+  "description": "masstodon mass counter project web ui",
+  "main": "src/index.coffee",
+  "dependencies": {
+    "async": "^2.1.4",
+    "lodash": "^4.17.2"
+  },
+  "devDependencies": {
+    "ajv": "^4.10.0",
+    "aws-sdk": "^2.7.13",
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.12.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "needle": "^1.4.2",
+    "pug": "^2.0.0-beta6",
+    "react": "^15.4.1",
+    "s3": "^4.4.0",
+    "should": "^11.1.2",
+    "webpack": "^2.1.0-beta.27"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://molszanski@github.com/MatteoLacki/MassTodonSPA.git"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/MatteoLacki/MassTodonSPA/issues"
+  },
+  "homepage": "https://github.com/MatteoLacki/MassTodonSPA#readme"
+}

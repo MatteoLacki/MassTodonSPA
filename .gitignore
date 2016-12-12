@@ -87,3 +87,32 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+
+
+
+# NODE STUFFF
+
+
+# Logs
+logs
+*.log
+
+lib-cov
+coverage
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+.lock-wscript
+
+www
+.DS_Store
+
+node_modules/
+bower_components/
+
+yarn.lock
+
+tooling/secrets/test.coffee
+tooling/secrets/production.coffee
+credentials.md
