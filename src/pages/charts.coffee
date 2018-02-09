@@ -51,7 +51,7 @@ export default createReactClass
 		drawer.close()
 
 	componentDidMount: ->
-		console.log 'ready to change the world222zzz2--'
+		console.log 'ready to change the worlz2--'
 		# console.log rectangleData
 
 		newShapes = []
@@ -165,15 +165,15 @@ export default createReactClass
 
 	render: ->
 		e React.Fragment, {},
-			div {}, 'Testdsdasdfsdasdfsd'
+			div {}, 'dfgdfgdfg22'
 
-			# e Plot, {
-			# 	data: d2.data
-			# 	layout: d2.layout
-			# 	# layout: {barmode: 'stack'};
-			# }
+			e Plot, {
+				data: d2.data
+				layout: d2.layout
+				# layout: {barmode: 'stack'};
+			}
 
-			# e Iframe, {
-			# 	width: '1200px'
-			# 	url: 'https://portal-new.mimuw.edu.pl/~matteo/mass_spectra/assigned_spectrum.html'
-			# }
+			e Iframe, {
+				width: '1200px'
+				url: 'https://portal-new.mimuw.edu.pl/~matteo/mass_spectra/assigned_spectrum.html'
+			}

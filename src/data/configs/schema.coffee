@@ -42,14 +42,17 @@ module.exports =
 			type: 'string'
 			title: 'Config name'
 			default: 'My Config 1'
-		# nickname:
-		# 	type: 'string'
-		# 	title: 'nickname'
-		# 	default: 'Ewi'
+		
+		name:
+			type: 'string'
+			title: 'Name of the Precursor'
+			default: 'Noble-prize-winning precursor'
+		
 		fasta:
 			type: 'string'
 			title: 'Amino Acid Sequence'
 			default: ''
+		
 		modifications:
 			type: 'array'
 			title: 'Modifications'
@@ -74,8 +77,6 @@ module.exports =
 							"{'H': 1, 'O': +2, 'N': +3}"
 						]
 
-
-
 		precursor_charge:
 			type: 'number'
 			title: 'Precursor Charge'
@@ -84,26 +85,64 @@ module.exports =
 	
 		mz_prec:
 			type: 'number'
-			title: 'Mass precision'
+			title: 'Mass Precision [in Thomsons]'
 			default: 0.05
 			minimum: 0
 
 		calcType:
 			type: 'object'
-			title: 'Processing Mode'
+			title: 'Thresholding'
 			properties:
 				base:
 					type: 'string'
-					title: 'Type of cutoff'
+					title: 'Type of Threshold'
 					enum: ['Peak Height', 'Joint Probability']
 				value:
 					type: 'number'
 					title: 'Value'
 
-		# fragType:
-		# 	type: 'string'
-		# 	title: 'FragType'
-		# 	default: 'cz'
+		blockedFragments:
+			type: 'string'
+			title: 'Blocked Fragments'
+			default: 'c0'
+			examples: ["c0", "z1c10z2"]
+
+		distanceBetweenCharges:
+			type: 'integer'
+			title: 'Minimal Distance Between Charges'
+			default: 5
+			minimum: 1
+			maximum: 20
+
+		fragType:
+			type: 'string'
+			title: 'Fragmentation Type'
+			default: 'cz'
+
+		minProbPerMol:
+			type: 'number'
+			title: 'Minimal Probability per Molecule [in %]'
+			default: 70.0
+			minimum: 0.0
+			maximum: 100.0
+  			
+		joinProb:
+			type: 'number'
+			title: 'Joint Probability of Isotopic Envelope [in %]'
+			default: 99.9
+			minimum: 0.0
+			maximum: 100.0
+
+		# TODO: if Matteo, we will need additional arguments.
+		calcType:
+			type: 'object'
+			title: 'Deconvolution'
+			properties:
+				base:
+					type: 'string'
+					title: 'algorithm'
+					enum: ['Matteo', 'Wanda']
+
 		# solver:
 		# 	type: 'string'
 		# 	title: 'Solver'
@@ -112,10 +151,5 @@ module.exports =
 		# 		'sequential'
 		# 		'parallel'
 		# 	]
-		# distanceBetweenCharges:
-		# 	type: 'integer'
-		# 	title: 'Distance Between Charges'
-		# 	default: 5
-		# 	minimum: 1
-		# 	maximum: 10
-		# 	multipleOf: 1
+		
+
