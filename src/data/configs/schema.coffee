@@ -46,12 +46,12 @@ module.exports =
 		name:
 			type: 'string'
 			title: 'Name of the Precursor'
-			default: 'Noble-prize-winning precursor'
+			default: 'ubiquitin'
 		
 		fasta:
 			type: 'string'
 			title: 'Amino Acid Sequence'
-			default: ''
+			default: 'MATTEQ'
 		
 		modifications:
 			type: 'array'
