@@ -101,6 +101,11 @@ module.exports =
 					type: 'number'
 					title: 'Value'
 
+		fragments:
+			type: 'string'
+			title: 'Fragments to look for.'
+			default: 'cz'
+
 		blockedFragments:
 			type: 'string'
 			title: 'Blocked Fragments'
@@ -113,11 +118,6 @@ module.exports =
 			default: 5
 			minimum: 1
 			maximum: 20
-
-		fragType:
-			type: 'string'
-			title: 'Fragmentation Type'
-			default: 'cz'
 
 		minProbPerMol:
 			type: 'number'
@@ -141,6 +141,7 @@ module.exports =
 				base:
 					type: 'string'
 					title: 'algorithm'
+					default: 'Matteo'
 					enum: ['Matteo', 'Wanda']
 
 		# solver:
