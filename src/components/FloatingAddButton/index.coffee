@@ -4,19 +4,21 @@ import AddIcon from '@material-ui/icons/Add';
 import { withStyles } from '@material-ui/core/styles';
 
 styleSheet = {
-  btn: {
-    position: 'fixed',
-    margin: '0px',
-    top: 'auto',
-    right: '30px',
-    bottom: '20px',
-    left: 'auto'
-  },
+	btn: {
+		position: 'fixed',
+		margin: '0px',
+		top: 'auto',
+		right: '30px',
+		bottom: '20px',
+		left: 'auto'
+	},
 };
 
 FloatingActionButtons = (p) ->
 	e Button, {
-		fab: true, color: 'primary', className: p.classes.btn
+		variant: 'fab'
+		color: 'primary',
+		className: p.classes.btn
 	},
 		e AddIcon, {}
 

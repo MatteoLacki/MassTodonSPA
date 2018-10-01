@@ -27,11 +27,7 @@ export default createReactClass
 	componentDidMount: ->
 		console.log 'ready to change the charts'
 
-
-
-
 	render: ->
-
 		plotlyConfig =
 			data: [plotlyData, plotlyType]
 			layout:
@@ -39,5 +35,6 @@ export default createReactClass
 				width: 720
 				height: 440
 
+		# Render
 		e React.Fragment, {},
 			e Plot, plotlyConfig

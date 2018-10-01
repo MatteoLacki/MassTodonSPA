@@ -1,6 +1,7 @@
 import _ from "lodash";
 import React from "react";
-import Card, { CardContent } from "@material-ui/core/Card";
+import Card from "@material-ui/core/Card";
+import CardContent  from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 import ConfirmDeleteButton from "components/ConfirmDeleteButton";
@@ -57,25 +58,9 @@ function MyConfigCard(props) {
       <div className={classes.details}>
         <CardContent className={classes.content}>
           <Typography type="headline">{props.name}</Typography>
-          {/*
-              <Typography type="subheading" color="secondary">
-                Mac Miller
-              </Typography>
-            */}
+
         </CardContent>
-        {/*
-              <div className={classes.controls}>
-              <IconButton aria-label="Previous">
-                <SkipPreviousIcon />
-              </IconButton>
-              <IconButton aria-label="Play/pause">
-                <PlayArrowIcon className={classes.playIcon} />
-              </IconButton>
-              <IconButton aria-label="Next">
-                <SkipNextIcon />
-              </IconButton>
-            </div>
-          */}
+
       </div>
       <div className={classes.actions}>
         {_.isFunction(actions.delete) && (
@@ -85,18 +70,11 @@ function MyConfigCard(props) {
             secondary="You will not be able to reuse this config, but existing jobs will keep a copy of it."
           />
         )}
-        {/*
-            <IconButton aria-label="Delete">
-              <DeleteIcon />
-            </IconButton>
-          */}
       </div>
     </Card>
   );
 }
 
-// Card.propTypes = {
-//   classes: PropTypes.object.isRequired,
-// };
+
 
 export default withStyles(styleSheet, { withTheme: true })(MyConfigCard);

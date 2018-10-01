@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import Button from "@material-ui/core/Button";
-import Dialog, {
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle
-} from "@material-ui/core/Dialog";
+
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogTitle from "@material-ui/core/DialogTitle";
+
 import DeleteIcon from "@material-ui/icons/Delete";
 
 export default class AlertDialog extends Component {
@@ -42,7 +43,8 @@ export default class AlertDialog extends Component {
         >
           <DeleteIcon />
         </Button>
-        <Dialog open={this.state.open} onRequestClose={this.handleRequestClose}>
+        {/*<Dialog open={this.state.open} onRequestClose={this.handleRequestClose}>*/}
+        <Dialog open={this.state.open}>
           <DialogTitle>{headerText}</DialogTitle>
           <DialogContent>
             <DialogContentText>{secondaryText}</DialogContentText>
@@ -51,7 +53,7 @@ export default class AlertDialog extends Component {
             <Button onClick={this.handleRequestClose} color="primary">
               Cancel
             </Button>
-            <Button onClick={this.confirmClose} color="accent">
+            <Button onClick={this.confirmClose} color="secondary">
               Delete
             </Button>
           </DialogActions>
