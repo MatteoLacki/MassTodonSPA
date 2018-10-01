@@ -1,10 +1,10 @@
 export default {
-  "assigned_spectrum": {
-    "y_range_start": 0,
-    "x_label": "mass/charge",
-    "y_label": "intensity",
-    "mz_digits": 2,
-    "tools": [
+  assigned_spectrum: {
+    y_range_start: 0,
+    x_label: "mass/charge",
+    y_label: "intensity",
+    mz_digits: 2,
+    tools: [
       "crosshair",
       "pan",
       "wheel_zoom",
@@ -15,8 +15,8 @@ export default {
       "box_select",
       "save"
     ],
-    "exp_vbar": {
-      "x": [
+    exp_vbar: {
+      x: [
         191.93,
         271.18,
         415.8,
@@ -373,7 +373,7 @@ export default {
         1483.74,
         1499.6
       ],
-      "top": [
+      top: [
         17.36,
         98.33,
         17.23,
@@ -730,29 +730,20 @@ export default {
         26.2,
         24.87
       ],
-      "width": 0.01,
-      "color": "black",
-      "alpha": 0.1
+      width: 0.01,
+      color: "black",
+      alpha: 0.1
     },
-    "threshold_line": {
-      "intensity": 2.220446049250313e-16,
-      "args": [
-        [
-          141.93,
-          1549.6
-        ],
-        [
-          2.220446049250313e-16,
-          2.220446049250313e-16
-        ]
-      ],
-      "kwds": {
-        "line_width": 2,
-        "color": "red"
+    threshold_line: {
+      intensity: 2.220446049250313e-16,
+      args: [[141.93, 1549.6], [2.220446049250313e-16, 2.220446049250313e-16]],
+      kwds: {
+        line_width: 2,
+        color: "red"
       }
     },
-    "rectangle_data": {
-      "mz_L": [
+    rectangle_data: {
+      mz_L: [
         271.175,
         272.185,
         273.185,
@@ -910,7 +901,7 @@ export default {
         1354.745,
         1355.7549999999999
       ],
-      "mz_R": [
+      mz_R: [
         271.185,
         272.195,
         273.195,
@@ -1068,7 +1059,7 @@ export default {
         1354.755,
         1355.765
       ],
-      "mz_left": [
+      mz_left: [
         270.675,
         271.69,
         273.185,
@@ -1226,7 +1217,7 @@ export default {
         1354.25,
         1355.755
       ],
-      "mz_right": [
+      mz_right: [
         271.685,
         272.69,
         273.195,
@@ -1384,7 +1375,7 @@ export default {
         1355.25,
         1355.7649999999999
       ],
-      "mz": [
+      mz: [
         271.18,
         272.19,
         273.19,
@@ -1542,7 +1533,7 @@ export default {
         1354.75,
         1355.76
       ],
-      "bottom": [
+      bottom: [
         0,
         0,
         0,
@@ -1700,7 +1691,7 @@ export default {
         1.686357622349748,
         0
       ],
-      "top": [
+      top: [
         96.06588351850385,
         13.949185050236212,
         0.6478477881707935,
@@ -1858,7 +1849,7 @@ export default {
         11.144635314837508,
         0.8883606165243019
       ],
-      "color": [
+      color: [
         "#e41a1c",
         "#e41a1c",
         "#e41a1c",
@@ -2016,7 +2007,7 @@ export default {
         "#4daf4a",
         "#4daf4a"
       ],
-      "intensity": [
+      intensity: [
         96.06588351850385,
         13.949185050236212,
         0.6478477881707935,
@@ -2174,7 +2165,7 @@ export default {
         9.45827769248776,
         0.8883606165243019
       ],
-      "molname": [
+      molname: [
         "c2",
         "c2",
         "c2",
@@ -2332,7 +2323,7 @@ export default {
         "precursor",
         "precursor"
       ],
-      "molsource": [
+      molsource: [
         "substanceP",
         "substanceP",
         "substanceP",
@@ -2490,7 +2481,7 @@ export default {
         "substanceP",
         "substanceP"
       ],
-      "molformula": [
+      molformula: [
         "C11H23N6O2",
         "C11H23N6O2",
         "C11H23N6O2",
@@ -2648,7 +2639,7 @@ export default {
         "C63H101N18O13S1",
         "C63H101N18O13S1"
       ],
-      "molq": [
+      molq: [
         1,
         1,
         1,
@@ -2806,7 +2797,7 @@ export default {
         1,
         1
       ],
-      "molg": [
+      molg: [
         0,
         0,
         0,
@@ -2964,7 +2955,7 @@ export default {
         2,
         2
       ],
-      "molintensity": [
+      molintensity: [
         111.45889828279103,
         111.45889828279103,
         111.45889828279103,
@@ -3123,53 +3114,32 @@ export default {
         2768.8610363171174
       ]
     },
-    "fat_rectangles": {
-      "top": "top",
-      "bottom": "bottom",
-      "left": "mz_left",
-      "right": "mz_right",
-      "color": "color",
-      "alpha": 0.5
+    fat_rectangles: {
+      top: "top",
+      bottom: "bottom",
+      left: "mz_left",
+      right: "mz_right",
+      color: "color",
+      alpha: 0.5
     },
-    "fat_rectangles_tooltips": [
-      [
-        "peak intensity",
-        "@intensity{0,0}"
-      ],
-      [
-        "m/z interval",
-        "@mz{0.00}"
-      ],
-      [
-        "name",
-        "@molname"
-      ],
-      [
-        "formula",
-        "@molformula"
-      ],
-      [
-        "q",
-        "@molq"
-      ],
-      [
-        "g",
-        "@molg"
-      ],
-      [
-        "total intensity",
-        "@molintensity{0,0}"
-      ]
+    fat_rectangles_tooltips: [
+      ["peak intensity", "@intensity{0,0}"],
+      ["m/z interval", "@mz{0.00}"],
+      ["name", "@molname"],
+      ["formula", "@molformula"],
+      ["q", "@molq"],
+      ["g", "@molg"],
+      ["total intensity", "@molintensity{0,0}"]
     ],
-    "slim_rectangles": {
-      "top": "top",
-      "bottom": "bottom",
-      "left": "mz_L",
-      "right": "mz_R",
-      "color": "color"
+    slim_rectangles: {
+      top: "top",
+      bottom: "bottom",
+      left: "mz_L",
+      right: "mz_R",
+      color: "color"
     },
-    "peak_groups_data": {
-      "mz_left": [
+    peak_groups_data: {
+      mz_left: [
         270.675,
         271.69,
         273.185,
@@ -3402,7 +3372,7 @@ export default {
         1355.755,
         1355.7649999999999
       ],
-      "mz_right": [
+      mz_right: [
         271.685,
         272.69,
         273.195,
@@ -3635,7 +3605,7 @@ export default {
         1355.7649999999999,
         1355.775
       ],
-      "mz": [
+      mz: [
         271.18,
         272.19,
         273.19,
@@ -3868,7 +3838,7 @@ export default {
         1355.76,
         1355.77
       ],
-      "intensity": [
+      intensity: [
         98.33,
         0,
         0,
@@ -4101,7 +4071,7 @@ export default {
         0,
         0
       ],
-      "estimate": [
+      estimate: [
         96.06588351850385,
         13.949185050236212,
         0.6478477881707935,
@@ -4334,7 +4304,7 @@ export default {
         0.8883606165243019,
         0.49575410691991095
       ],
-      "abserror": [
+      abserror: [
         2.2641164814961456,
         13.949185050236212,
         0.6478477881707935,
@@ -4568,34 +4538,22 @@ export default {
         0.49575410691991095
       ]
     },
-    "peak_groups": {
-      "x0": "mz_left",
-      "x1": "mz_right",
-      "y0": "intensity",
-      "y1": "intensity",
-      "color": "red",
-      "line_width": 3
+    peak_groups: {
+      x0: "mz_left",
+      x1: "mz_right",
+      y0: "intensity",
+      y1: "intensity",
+      color: "red",
+      line_width: 3
     },
-    "peak_groups_tooltips": [
-      [
-        "total intensity",
-        "@intensity{0,0}"
-      ],
-      [
-        "total estimate",
-        "@estimate{0,0}"
-      ],
-      [
-        "absolute error",
-        "@abserror{0,0}"
-      ],
-      [
-        "m/z",
-        "@mz{0.00}"
-      ]
+    peak_groups_tooltips: [
+      ["total intensity", "@intensity{0,0}"],
+      ["total estimate", "@estimate{0,0}"],
+      ["absolute error", "@abserror{0,0}"],
+      ["m/z", "@mz{0.00}"]
     ],
-    "experimental_squares": {
-      "x": [
+    experimental_squares: {
+      x: [
         191.93,
         271.18,
         415.8,
@@ -4952,7 +4910,7 @@ export default {
         1483.74,
         1499.6
       ],
-      "y": [
+      y: [
         17.36,
         98.33,
         17.23,
@@ -5309,22 +5267,16 @@ export default {
         26.2,
         24.87
       ],
-      "size": 5,
-      "color": "black",
-      "alpha": 0.5
+      size: 5,
+      color: "black",
+      alpha: 0.5
     },
-    "experimental_squares_tooltips": [
-      [
-        "intensity",
-        "@y{0,0}"
-      ],
-      [
-        "m/z",
-        "@x{0.00}"
-      ]
+    experimental_squares_tooltips: [
+      ["intensity", "@y{0,0}"],
+      ["m/z", "@x{0.00}"]
     ],
-    "cluster_data": {
-      "mz": [
+    cluster_data: {
+      mz: [
         1349.74,
         449.91,
         271.18,
@@ -5341,7 +5293,7 @@ export default {
         1078.56,
         1332.72
       ],
-      "intensity": [
+      intensity: [
         2454.7137659352493,
         553.6,
         98.33,
@@ -5358,7 +5310,7 @@ export default {
         982,
         1397
       ],
-      "mol_intensity": [
+      mol_intensity: [
         2983.8915180941717,
         1278.0077568883237,
         111.45889828279103,
@@ -5375,7 +5327,7 @@ export default {
         1660.2768727380096,
         2461.274784628823
       ],
-      "mol_name": [
+      mol_name: [
         "precursor",
         "precursor",
         "c2",
@@ -5393,14 +5345,14 @@ export default {
         "z11"
       ]
     },
-    "labels": {
-      "x": "mz",
-      "y": "intensity",
-      "text": "mol_name",
-      "level": "glyph",
-      "x_offset": 0,
-      "y_offset": 1,
-      "render_mode": "css"
+    labels: {
+      x: "mz",
+      y: "intensity",
+      text: "mol_name",
+      level: "glyph",
+      x_offset: 0,
+      y_offset: 1,
+      render_mode: "css"
     }
   }
-}
+};
