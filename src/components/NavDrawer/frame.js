@@ -1,4 +1,5 @@
 import React from "react";
+import { observer } from "mobx-react";
 // import PropTypes from 'prop-types';
 import { withStyles } from "@material-ui/core/styles";
 import classNames from "classnames";
@@ -11,8 +12,8 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+
 import MenuContent from "./menu-content";
-import { observer } from "mobx-react";
 import ui from "data/ui/drawer";
 
 const drawerWidth = 240;
@@ -101,9 +102,8 @@ const styles = theme => ({
 class MiniDrawer extends React.Component {
   displayName = "MiniDrawer";
   state = {
-    open: true
+    open: false
   };
-
   handleDrawerOpen = () => {
     this.setState({ open: true });
   };
@@ -114,8 +114,8 @@ class MiniDrawer extends React.Component {
 
   render() {
     const { classes, theme } = this.props;
-    // const openness = this.state.open
-    const openness = ui.drawer;
+    const openness = this.state.open;
+
     return (
       <div className={classes.root}>
         <div className={classes.appFrame}>

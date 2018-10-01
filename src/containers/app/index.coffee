@@ -2,15 +2,12 @@ import { React, createReactClass, reactRedux, e, DOM, mobxReact } from 'app/reac
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { withRouter }       from 'react-router'
 import { MuiThemeProvider } from '@material-ui/core/styles'
-import CssBaseline               from '@material-ui/core/CssBaseline';
+import CssBaseline          from '@material-ui/core/CssBaseline';
 import NavDrawer            from 'components/NavDrawer/frame.js'
 import LoginForm            from 'components/LoginForm'
-
-import auth                 from 'data/auth/state'
 import theme                from './theme.coffee'
-
+import auth                 from 'data/auth/state'
 # Pages
-# import jobs from 'containers/jobs'
 import configs from 'pages/configs'
 import files   from 'pages/files'
 import jobs    from 'pages/jobs'
@@ -19,8 +16,6 @@ import config  from 'containers/config-form'
 
 if process.env.REACT_APP_DEV
 	MobxDevTools = require('mobx-react-devtools').default
-# # hideLoader = require './loader'
-
 
 export default withRouter mobxReact.observer createReactClass
 	displayName: 'App'

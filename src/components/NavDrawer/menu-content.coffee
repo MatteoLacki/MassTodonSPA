@@ -1,7 +1,9 @@
-import { _, React, e, DOM } from 'app/react-tools'
+import { _, React, e, DOM, createReactClass } from 'app/react-tools'
 import { Link } from 'react-router-dom'
 import List from '@material-ui/core/List'
-import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
 # Icons
 import DashboardIcon     from '@material-ui/icons/Dashboard'
 import CollectionsIcon   from '@material-ui/icons/Collections'
@@ -39,12 +41,11 @@ menuData =
 		label: 'Test Chart'
 		icon: e InsertChartIcon, {}
 
-
-export default ->
-
-	e List, {},
-		_.map menuData, (el, key) ->
-			e Link, { key: key,  to: el.uri },
-				e ListItem, { button: true },
-					e ListItemIcon, {}, el.icon
-					e ListItemText, primary: el.label
+export default createReactClass
+	render: ->
+		e List, {},
+			_.map menuData, (el, key) ->
+				e Link, { key: key,  to: el.uri },
+					e ListItem, { button: true },
+						e ListItemIcon, {}, el.icon
+						e ListItemText, primary: el.label
