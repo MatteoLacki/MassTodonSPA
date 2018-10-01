@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-import Paper from 'material-ui/Paper';
-import Typography from 'material-ui/Typography';
-import TextField from 'material-ui/TextField';
-import { Button, Divider, Grid } from 'material-ui/'
+import { withStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import TextField from '@material-ui/core/TextField';
+import { Button, Divider, Grid } from '@material-ui/core/'
 
 const _ = require('lodash');
 
@@ -101,7 +101,7 @@ class MyLoginForm extends Component {
                 </Grid>
 
                 <Grid item>
-                  <Button raised color="primary" > Sign In</Button>
+                  <Button variant="raised" color="primary" > Sign In</Button>
                 </Grid>
 
                 <Grid item >
@@ -113,7 +113,7 @@ class MyLoginForm extends Component {
                 {
                   (_.isFunction(actions.signInWithGoogle)) &&
                     <Grid item >
-                      <Button raised color="primary" onClick = {actions.signInWithGoogle} > Sign In With Google</Button>
+                      <Button variant="raised" color="primary" onClick = {actions.signInWithGoogle} > Sign In With Google</Button>
                     </Grid>
                 }
 

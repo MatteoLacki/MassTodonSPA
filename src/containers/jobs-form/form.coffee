@@ -7,22 +7,22 @@ reactRedux = require 'react-redux'
 jsfForm = React.createFactory require('react-jsonschema-form').default
 typeAhead = React.createFactory require('react-bootstrap-typeahead').Typeahead
 
-Button = React.createFactory require('material-ui/Button').default
-Menu = React.createFactory require('material-ui/Menu').default
-MenuItem = React.createFactory require('material-ui/Menu').MenuItem
+Button = React.createFactory require('@material-ui/core/Button').default
+Menu = React.createFactory require('@material-ui/core/Menu').default
+MenuItem = React.createFactory require('@material-ui/core/Menu').MenuItem
 
-Dialog = React.createFactory require('material-ui/Dialog').default
-DialogTitle = React.createFactory require('material-ui/Dialog').DialogTitle
-Typography = React.createFactory require('material-ui/Typography').default
-TextField = React.createFactory require('material-ui/TextField').default
+Dialog = React.createFactory require('@material-ui/core/Dialog').default
+DialogTitle = React.createFactory require('@material-ui/core/Dialog').DialogTitle
+Typography = React.createFactory require('@material-ui/core/Typography').default
+TextField = React.createFactory require('@material-ui/core/TextField').default
 
-{ createStyleSheet, withStyles } = require 'material-ui/styles'
+{ createStyleSheet, withStyles } = require '@material-ui/core/styles'
 
 # Grid
-Grid = React.createFactory require('material-ui/Grid').default
+Grid = React.createFactory require('@material-ui/core/Grid').default
 
 # SimpleDialog
-{ blue } = require 'material-ui/colors'
+{ blue } = require '@material-ui/core/colors'
 styleSheet = createStyleSheet 'SimpleDialog232', ->
 	avatar:
 		background: blue[100]

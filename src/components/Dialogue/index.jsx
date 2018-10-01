@@ -1,10 +1,10 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, createStyleSheet } from 'material-ui/styles';
-import List, { ListItem, ListItemText } from 'material-ui/List';
-import Menu, { MenuItem } from 'material-ui/Menu';
-import Typography from 'material-ui/Typography';
+import { withStyles, createStyleSheet } from '@material-ui/core/styles';
+import List, { ListItem, ListItemText } from '@material-ui/core/List';
+import Menu, { MenuItem } from '@material-ui/core/Menu';
+import Typography from '@material-ui/core/Typography';
 
 
 

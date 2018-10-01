@@ -7,7 +7,7 @@
 
 Component = require './index.coffee'
 # Component = require('./myGrid.coffee')
-{ MuiThemeProvider } = require 'material-ui/styles'
+{ MuiThemeProvider } = require '@material-ui/core/styles'
 
 
 supervillains = require 'supervillains'

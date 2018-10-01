@@ -3,10 +3,10 @@
 
 # Dom
 { div, ul, li, h1, p, a, img, span } = DOM
-Paper = require('material-ui/Paper').default
-Button = require('material-ui/Button').default
-Typography = require('material-ui/Typography').default
-LinearProgress = require('material-ui/Progress/LinearProgress').default
+Paper = require('@material-ui/core/Paper').default
+Button = require('@material-ui/core/Button').default
+Typography = require('@material-ui/core/Typography').default
+LinearProgress = require('@material-ui/core/Progress/LinearProgress').default
 
 CloudUploadIcon = require('material-ui-icons/CloudUpload').default
 EditIcon = require('material-ui-icons/Edit').default

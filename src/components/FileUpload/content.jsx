@@ -1,17 +1,17 @@
 import React, { Component }             from 'react'
 import PropTypes                        from 'prop-types'
-import { withStyles, createStyleSheet } from 'material-ui/styles'
+import { withStyles, createStyleSheet } from '@material-ui/core/styles'
 
-import Typography            from 'material-ui/Typography'
-import Button                from 'material-ui/Button'
-import Paper                 from 'material-ui/Paper'
+import Typography            from '@material-ui/core/Typography'
+import Button                from '@material-ui/core/Button'
+import Paper                 from '@material-ui/core/Paper'
 
 import CloudUploadIcon            from 'material-ui-icons/CloudUpload'
 import ProgressBar from './ProgressBar.jsx'
 
 
 const styles = require('./index.styl')
-import { grey } from 'material-ui/colors'
+import { grey } from '@material-ui/core/colors'
 const styleSheet = {
   paper: {
     backgroundColor: '#E0E0E0'

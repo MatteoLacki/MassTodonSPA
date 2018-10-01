@@ -7,8 +7,7 @@ import drawer from 'data/ui/drawer'
 # Plot = createPlotlyComponent Plotly
 import testData from './data/test'
 # import Iframe from 'react-iframe'
-
-
+# import Iframe from '@trendmicro/react-iframe';
 
 
 
@@ -167,13 +166,27 @@ export default createReactClass
 		e React.Fragment, {},
 			div {}, 'dfgdfgdfg22'
 
-			e Plot, {
-				data: d2.data
-				layout: d2.layout
-				# layout: {barmode: 'stack'};
-			}
+			# e Plot, {
+			# 	data: d2.data
+			# 	layout: d2.layout
+			# 	# layout: {barmode: 'stack'};
+			# }
+			div {}, 'charts'
 
-			e Iframe, {
-				width: '1200px'
-				url: 'https://portal-new.mimuw.edu.pl/~matteo/mass_spectra/assigned_spectrum.html'
-			}
+			# e Iframe, {
+			# 	width: '100%'
+			# 	height: '700px'
+			# 	src: 'https://firebasestorage.googleapis.com/v0/b/masstodon-test.appspot.com/o/results%2Fmatteo_user_id2%2Fmatteo_test_job_id%2Fassigned_spectrum.html?alt=media&token=751442ac-27fc-4f93-b255-2c220e10f853'
+			# }
+
+			# e Iframe, {
+			# 	width: '100%'
+			# 	height: '700px'
+			# 	src: 'https://firebasestorage.googleapis.com/v0/b/masstodon-test.appspot.com/o/results%2Fmatteo_user_id2%2Fmatteo_test_job_id%2Ffragment_intensities.html?alt=media&token=d48cbce1-f54e-4cf3-9a48-cdec19b7f04f'
+			# }
+
+			# e Iframe, {
+			# 	width: '100%'
+			# 	height: '700px'
+			# 	src: 'https://firebasestorage.googleapis.com/v0/b/masstodon-test.appspot.com/o/results%2Fmatteo_user_id2%2Fmatteo_test_job_id%2Faggregated_precusors.html?alt=media&token=41706bfe-8338-461d-bca0-1a898ad36535'
+			# }

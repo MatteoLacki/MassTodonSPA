@@ -10,11 +10,11 @@ reactRedux         = require 'react-redux'
 # Dom
 JobsList             = React.createFactory require('components/JobsList').default
 CircularLoader       = React.createFactory require('components/CircularLoader').default
-Grid                 = React.createFactory require('material-ui/Grid').default
+Grid                 = React.createFactory require('@material-ui/core/Grid').default
 SimpleJobDescription = React.createFactory require('components/PaperText').default
 
 { div, ul, li, h1, p, a, img, span } = React.DOM
-{ createStyleSheet, withStyles } = require 'material-ui/styles'
+{ createStyleSheet, withStyles } = require '@material-ui/core/styles'
 Highcharts = require 'highcharts'
 require('highcharts/modules/exporting')(Highcharts)
 

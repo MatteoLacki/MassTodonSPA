@@ -1,8 +1,8 @@
 import { React, createReactClass, reactRedux, e, DOM, mobxReact } from 'app/react-tools'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { withRouter }       from 'react-router'
-import { MuiThemeProvider } from 'material-ui/styles'
-import Reboot               from 'material-ui/Reboot';
+import { MuiThemeProvider } from '@material-ui/core/styles'
+import CssBaseline               from '@material-ui/core/CssBaseline';
 import NavDrawer            from 'components/NavDrawer/frame.js'
 import LoginForm            from 'components/LoginForm'
 
@@ -26,8 +26,9 @@ export default withRouter mobxReact.observer createReactClass
 	displayName: 'App'
 	componentWillMount: -> auth.tryToLogin()
 	render: ->
+		console.log auth.state
 		e React.Fragment, {},
-			e Reboot, {}
+			e CssBaseline, {}
 
 			# Read if user is logged in or not
 			if auth.state.isInitialUserStateLoaded

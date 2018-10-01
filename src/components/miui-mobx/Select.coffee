@@ -1,7 +1,7 @@
 { _, createReactClass, e } = require 'app/react-tools'
 { observer }               = require 'mobx-react'
 
-Select = require('material-ui/Select').default
+Select = require('@material-ui/core/Select').default
 
 module.exports = (props) ->
 	field = props.field

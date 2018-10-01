@@ -1,6 +1,6 @@
 { _, createReactClass, e } = require 'app/react-tools'
 { observer } = require 'mobx-react'
-TextField   = require('material-ui/TextField').default
+TextField   = require('@material-ui/core/TextField').default
 
 module.exports = observer (props) ->
 	field = props.field

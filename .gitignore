@@ -5,6 +5,7 @@
 
 yarn.lock
 package.lock
+shrinkwrap.yaml
 
 # testing
 /coverage

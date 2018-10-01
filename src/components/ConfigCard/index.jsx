@@ -1,11 +1,11 @@
 import React                 from 'react'
 
-import Card, { CardContent } from 'material-ui/Card'
-import Typography            from 'material-ui/Typography'
+import Card, { CardContent } from '@material-ui/core/Card'
+import Typography            from '@material-ui/core/Typography'
 
 import ConfirmDeleteButton   from 'components/ConfirmDeleteButton'
 
-import { withStyles } from 'material-ui/styles'
+import { withStyles } from '@material-ui/core/styles'
 import _   from 'lodash'
 
 const styleSheet = theme => ({

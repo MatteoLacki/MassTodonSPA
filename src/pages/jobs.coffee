@@ -6,7 +6,7 @@ import drawer from 'data/ui/drawer'
 import component from 'containers/jobs'
 
 import jobDescription from 'components/PaperText'
-import Grid from 'material-ui/Grid'
+import Grid from '@material-ui/core/Grid'
 
 { div, h1, p, a, img, span, ul, li } = DOM
 
@@ -33,15 +33,15 @@ export default mobxReact.observer createReactClass
 
 
 
-# Button = React.createFactory require('material-ui/Button').default
-# # Avatar = React.createFactory require('material-ui/Avatar').default
+# Button = React.createFactory require('@material-ui/core/Button').default
+# # Avatar = React.createFactory require('@material-ui/core/Avatar').default
 # # PersonIcon = React.createFactory require('material-ui-icons/Person').default
 # AddIcon = React.createFactory require('material-ui-icons/Add').default
 
 
 # # Default Grid
-# Grid = React.createFactory require('material-ui/Grid').default
-# { createStyleSheet, withStyles } = require 'material-ui/styles'
+# Grid = React.createFactory require('@material-ui/core/Grid').default
+# { createStyleSheet, withStyles } = require '@material-ui/core/styles'
 # gridStyle = createStyleSheet 'FullGrid', (theme) ->
 # 	root:
 # 		flexGrow: 1

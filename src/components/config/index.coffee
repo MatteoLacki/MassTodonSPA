@@ -7,9 +7,7 @@ createReactClass = require 'create-react-class'
 styles = require './index.styl'
 
 
-
 # Dom
-
 listElement = (item, actions) ->
 	div { key: item.key, className: "#{styles.default}" },
 		div {className: 'row list-group-item vertical-container'},

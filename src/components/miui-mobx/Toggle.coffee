@@ -1,8 +1,8 @@
 
 { _, e, DOM } = require 'app/react-tools'
 
-FormControlLabel = require('material-ui/Form/FormControlLabel').default
-Switch           = require('material-ui/Switch').default
+FormControlLabel = require('@material-ui/core/Form/FormControlLabel').default
+Switch           = require('@material-ui/core/Switch').default
 
 
 module.exports = (props) ->

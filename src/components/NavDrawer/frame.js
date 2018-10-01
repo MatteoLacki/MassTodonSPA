@@ -1,108 +1,107 @@
-import React from 'react';
+import React from "react";
 // import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
-import classNames from 'classnames';
-import Drawer from 'material-ui/Drawer';
-import AppBar from 'material-ui/AppBar';
-import Toolbar from 'material-ui/Toolbar';
-import Typography from 'material-ui/Typography';
-import Divider from 'material-ui/Divider';
-import IconButton from 'material-ui/IconButton';
-import MenuIcon from 'material-ui-icons/Menu';
-import ChevronLeftIcon from 'material-ui-icons/ChevronLeft';
-import ChevronRightIcon from 'material-ui-icons/ChevronRight';
-import MenuContent from './menu-content'
-import {observer} from 'mobx-react'
-import ui from 'data/ui/drawer'
+import { withStyles } from "@material-ui/core/styles";
+import classNames from "classnames";
+import Drawer from "@material-ui/core/Drawer";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import Divider from "@material-ui/core/Divider";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import MenuContent from "./menu-content";
+import { observer } from "mobx-react";
+import ui from "data/ui/drawer";
 
 const drawerWidth = 240;
 
 const styles = theme => ({
   root: {
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
     // marginTop: theme.spacing.unit * 3,
     zIndex: 1,
-    overflow: 'hidden',
+    overflow: "hidden"
   },
   appFrame: {
-    position: 'relative',
-    display: 'flex',
-    width: '100%',
-    height: '100%',
+    position: "relative",
+    display: "flex",
+    width: "100%",
+    height: "100%"
   },
   appBar: {
-    position: 'absolute',
+    position: "absolute",
     zIndex: theme.zIndex.drawer + 1,
-    transition: theme.transitions.create(['width', 'margin'], {
+    transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
+      duration: theme.transitions.duration.leavingScreen
+    })
   },
   appBarShift: {
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(['width', 'margin'], {
+    transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
+      duration: theme.transitions.duration.enteringScreen
+    })
   },
   menuButton: {
     marginLeft: 12,
-    marginRight: 36,
+    marginRight: 36
   },
   hide: {
-    display: 'none',
+    display: "none"
   },
   drawerPaper: {
-    position: 'relative',
-    height: '100%',
+    position: "relative",
+    height: "100%",
     width: drawerWidth,
-    transition: theme.transitions.create('width', {
+    transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
+      duration: theme.transitions.duration.enteringScreen
+    })
   },
   drawerPaperClose: {
     width: 60,
-    overflowX: 'hidden',
-    transition: theme.transitions.create('width', {
+    overflowX: "hidden",
+    transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
+      duration: theme.transitions.duration.leavingScreen
+    })
   },
   drawerInner: {
     // Make the items inside not wrap when transitioning:
     width: drawerWidth,
-    height: '100vh'
+    height: "100vh"
   },
   drawerHeader: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    padding: '0 8px',
-    ...theme.mixins.toolbar,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "flex-end",
+    padding: "0 8px",
+    ...theme.mixins.toolbar
   },
   content: {
-    width: '100%',
+    width: "100%",
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
     padding: 24,
-    height: 'calc(100% - 56px)',
-    minHeight: '100vh',
+    height: "calc(100% - 56px)",
+    minHeight: "100vh",
     marginTop: 56,
-    [theme.breakpoints.up('sm')]: {
-      height: 'calc(100% - 64px)',
-      marginTop: 64,
-    },
-  },
+    [theme.breakpoints.up("sm")]: {
+      height: "calc(100% - 64px)",
+      marginTop: 64
+    }
+  }
 });
 
-
 class MiniDrawer extends React.Component {
-  displayName = 'MiniDrawer'
+  displayName = "MiniDrawer";
   state = {
-    open: true,
+    open: true
   };
 
   handleDrawerOpen = () => {
@@ -116,17 +115,25 @@ class MiniDrawer extends React.Component {
   render() {
     const { classes, theme } = this.props;
     // const openness = this.state.open
-    const openness = ui.drawer
+    const openness = ui.drawer;
     return (
       <div className={classes.root}>
         <div className={classes.appFrame}>
-          <AppBar className={classNames(classes.appBar, openness && classes.appBarShift)}>
+          <AppBar
+            className={classNames(
+              classes.appBar,
+              openness && classes.appBarShift
+            )}
+          >
             <Toolbar disableGutters={!openness}>
               <IconButton
                 color="inherit"
                 aria-label="open drawer"
                 onClick={this.handleDrawerOpen}
-                className={classNames(classes.menuButton, openness && classes.hide)}
+                className={classNames(
+                  classes.menuButton,
+                  openness && classes.hide
+                )}
               >
                 <MenuIcon />
               </IconButton>
@@ -138,31 +145,36 @@ class MiniDrawer extends React.Component {
           <Drawer
             type="permanent"
             classes={{
-              paper: classNames(classes.drawerPaper, !openness && classes.drawerPaperClose),
+              paper: classNames(
+                classes.drawerPaper,
+                !openness && classes.drawerPaperClose
+              )
             }}
             open={openness}
           >
             <div className={classes.drawerInner}>
               <div className={classes.drawerHeader}>
                 <IconButton onClick={this.handleDrawerClose}>
-                  {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+                  {theme.direction === "rtl" ? (
+                    <ChevronRightIcon />
+                  ) : (
+                    <ChevronLeftIcon />
+                  )}
                 </IconButton>
               </div>
               <Divider />
-              <MenuContent/>
-             {/* <List className={classes.list}>{mailFolderListItems}</List>
+              <MenuContent />
+              {/* <List className={classes.list}>{mailFolderListItems}</List>
               <Divider />
               <List className={classes.list}>{otherMailFolderListItems}</List>*/}
             </div>
           </Drawer>
-          <main className={classes.content}>
-            {this.props.children}
-          </main>
+          <main className={classes.content}>{this.props.children}</main>
         </div>
       </div>
     );
   }
-};
+}
 
 // MiniDrawer.propTypes = {
 //   classes: PropTypes.object.isRequired,

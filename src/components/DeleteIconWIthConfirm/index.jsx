@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Button from 'material-ui/Button';
-import IconButton from 'material-ui/IconButton';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
 import Dialog, {
   DialogActions,
   DialogContent,
   DialogContentText,
   DialogTitle,
-} from 'material-ui/Dialog';
+} from '@material-ui/core/Dialog';
 import DeleteIcon from 'material-ui-icons/Delete';
 
 export default class DeleteIconWithConfirm extends Component {

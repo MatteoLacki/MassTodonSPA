@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, createStyleSheet } from 'material-ui/styles';
-import { LinearProgress } from 'material-ui/Progress';
+import { withStyles, createStyleSheet } from '@material-ui/core/styles';
+import { LinearProgress } from '@material-ui/core/Progress';
 
 const styleSheet = {
   root: {

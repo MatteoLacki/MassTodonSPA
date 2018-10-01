@@ -1,7 +1,7 @@
 import { React, createReactClass, e, DOM } from 'app/react-tools'
-import Button from 'material-ui/Button';
-import AddIcon from 'material-ui-icons/Add';
-import { withStyles } from 'material-ui/styles';
+import Button from '@material-ui/core/Button';
+import AddIcon from '@material-ui/icons/Add';
+import { withStyles } from '@material-ui/core/styles';
 
 styleSheet = {
   btn: {

@@ -8,21 +8,21 @@ classNames = require 'classnames'
 
 # AppBar
 MyAppBar   = require 'containers/app-bar'
-Paper      = require('material-ui/Paper').default
-AppBar     = require('material-ui/AppBar').default
-Toolbar    = require('material-ui/Toolbar').default
-Button     = require('material-ui/Button').default
-IconButton = require('material-ui/IconButton').default
+Paper      = require('@material-ui/core/Paper').default
+AppBar     = require('@material-ui/core/AppBar').default
+Toolbar    = require('@material-ui/core/Toolbar').default
+Button     = require('@material-ui/core/Button').default
+IconButton = require('@material-ui/core/IconButton').default
 
 # Drawer
-Drawer       = require('material-ui/Drawer').default
-List         = require('material-ui/List').default
-Divider      = require('material-ui/Divider').default
-List         = require('material-ui/List').default
+Drawer       = require('@material-ui/core/Drawer').default
+List         = require('@material-ui/core/List').default
+Divider      = require('@material-ui/core/Divider').default
+List         = require('@material-ui/core/List').default
 
-ListItem     = require('material-ui/List/ListItem').default
-ListItemText = require('material-ui/List/ListItemText').default
-ListItemIcon = require('material-ui/List/ListItemIcon').default
+ListItem     = require('@material-ui/core/List/ListItem').default
+ListItemText = require('@material-ui/core/List/ListItemText').default
+ListItemIcon = require('@material-ui/core/List/ListItemIcon').default
 
 
 # Icons
@@ -138,6 +138,6 @@ moreStyles = (theme) ->
 				marginTop: 64
 
 
-{ withStyles } = require 'material-ui/styles'
+{ withStyles } = require '@material-ui/core/styles'
 
 module.exports = withStyles(moreStyles) MiniDrawer

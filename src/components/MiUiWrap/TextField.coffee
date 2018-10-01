@@ -2,7 +2,7 @@
 
 
 
-TextField  = require('material-ui/TextField').default
+TextField  = require('@material-ui/core/TextField').default
 
 
 module.exports = (props) ->

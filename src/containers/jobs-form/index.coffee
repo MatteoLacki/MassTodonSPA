@@ -48,7 +48,7 @@ mapDispatchToProps = (dispatch, ownProps) ->
 
 
 
-{ createStyleSheet, withStyles } = require 'material-ui/styles'
+{ createStyleSheet, withStyles } = require '@material-ui/core/styles'
 gridStyle = createStyleSheet 'FullGrid', (theme) ->
 	root:
 		flexGrow: 1
