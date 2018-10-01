@@ -35,8 +35,8 @@ export default mobxReact.observer createReactClass
 
 # Button = React.createFactory require('@material-ui/core/Button').default
 # # Avatar = React.createFactory require('@material-ui/core/Avatar').default
-# # PersonIcon = React.createFactory require('material-ui-icons/Person').default
-# AddIcon = React.createFactory require('material-ui-icons/Add').default
+# # PersonIcon = React.createFactory require('@material-ui/icons/Person').default
+# AddIcon = React.createFactory require('@material-ui/icons/Add').default
 
 
 # # Default Grid

@@ -1,61 +1,61 @@
-import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
+import React, { Component } from "react";
+import Button from "@material-ui/core/Button";
+import IconButton from "@material-ui/core/IconButton";
 import Dialog, {
   DialogActions,
   DialogContent,
   DialogContentText,
-  DialogTitle,
-} from '@material-ui/core/Dialog';
-import DeleteIcon from 'material-ui-icons/Delete';
+  DialogTitle
+} from "@material-ui/core/Dialog";
+import DeleteIcon from "@material-ui/icons/Delete";
 
 export default class DeleteIconWithConfirm extends Component {
   state = {
-    open: false,
+    open: false
   };
 
   handleRequestClose = () => {
     this.setState({ open: false });
   };
 
-  confirmClose = () =>
-  {
+  confirmClose = () => {
     this.setState({ open: false });
-    this.props.confirm()
+    this.props.confirm();
   };
 
-  handleCLick = (e) => {
+  handleCLick = e => {
     this.setState({ open: true });
     e.stopPropagation();
     e.preventDefault();
-  }
+  };
 
   render() {
-
-
-    const headerText    = this.props.header    || 'Are you sure you want to remove this item?'
-    const secondaryText = this.props.secondary || ' This may not be recoverable.'
-
+    const headerText =
+      this.props.header || "Are you sure you want to remove this item?";
+    const secondaryText =
+      this.props.secondary || " This may not be recoverable.";
 
     return (
       <div>
         <IconButton
-          color = { this.props.color }
-          onClick={ this.handleCLick }
-          aria-label= { this.props['aria-label'] }
+          color={this.props.color}
+          onClick={this.handleCLick}
+          aria-label={this.props["aria-label"]}
         >
-           <DeleteIcon />
+          <DeleteIcon />
         </IconButton>
         <Dialog open={this.state.open} onRequestClose={this.handleRequestClose}>
           <DialogTitle>{headerText}</DialogTitle>
           <DialogContent>
-            <DialogContentText>
-              {secondaryText}
-            </DialogContentText>
+            <DialogContentText>{secondaryText}</DialogContentText>
           </DialogContent>
           <DialogActions>
-            <Button onClick={this.handleRequestClose} color="primary">Cancel</Button>
-            <Button onClick={this.confirmClose} color="accent">Delete</Button>
+            <Button onClick={this.handleRequestClose} color="primary">
+              Cancel
+            </Button>
+            <Button onClick={this.confirmClose} color="accent">
+              Delete
+            </Button>
           </DialogActions>
         </Dialog>
       </div>

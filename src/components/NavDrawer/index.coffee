@@ -26,10 +26,10 @@ ListItemIcon = require('@material-ui/core/List/ListItemIcon').default
 
 
 # Icons
-MenuIcon        = require('material-ui-icons/Menu').default
-ArrowBackIcon   = require('material-ui-icons/ArrowBack').default
-FilterListIcon  = require('material-ui-icons/FilterList').default
-ChevronLeftIcon = require('material-ui-icons/ChevronLeft').default
+MenuIcon        = require('@material-ui/icons/Menu').default
+ArrowBackIcon   = require('@material-ui/icons/ArrowBack').default
+FilterListIcon  = require('@material-ui/icons/FilterList').default
+ChevronLeftIcon = require('@material-ui/icons/ChevronLeft').default
 
 
 

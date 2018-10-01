@@ -8,8 +8,8 @@ Button = require('@material-ui/core/Button').default
 Typography = require('@material-ui/core/Typography').default
 LinearProgress = require('@material-ui/core/Progress/LinearProgress').default
 
-CloudUploadIcon = require('material-ui-icons/CloudUpload').default
-EditIcon = require('material-ui-icons/Edit').default
+CloudUploadIcon = require('@material-ui/icons/CloudUpload').default
+EditIcon = require('@material-ui/icons/Edit').default
 
 Dropzone = require 'react-dropzone'
 # DropContent = React.createFactory require('./content').default
