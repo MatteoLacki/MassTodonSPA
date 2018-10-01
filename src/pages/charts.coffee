@@ -1,6 +1,6 @@
 import { _, React, createReactClass, reactRedux, e, DOM, mobxReact } from 'app/react-tools'
 import drawer from 'data/ui/drawer'
-
+import Plot from 'react-plotly.js';
 { div, span } = DOM
 
 # import createPlotlyComponent from 'react-plotly.js/factory'
@@ -43,6 +43,27 @@ console.log '---'
 console.log testData
 
 rectangleData = testData.assigned_spectrum.rectangle_data
+
+plotlyConfig =
+	data: [
+		{
+			x: [1, 2, 3]
+			y: [2, 6, 3]
+			type: 'scatter'
+			mode: 'lines+points'
+			marker: {color: 'red'}
+		}
+	,
+		{
+			type: 'bar'
+			x: [1, 2, 3]
+			y: [2, 5, 3]
+		}
+	]
+	layout:
+		title: 'A Fancy Plot'
+		width: 720
+		height: 440
 
 export default createReactClass
 	componentWillMount: ->
@@ -164,14 +185,24 @@ export default createReactClass
 
 	render: ->
 		e React.Fragment, {},
-			div {}, 'dfgdfgdfg22'
+			# div {}, 'dfgdfgdfg22'
 
 			# e Plot, {
 			# 	data: d2.data
 			# 	layout: d2.layout
 			# 	# layout: {barmode: 'stack'};
 			# }
-			div {}, 'charts'
+			# div {
+			# 	id: 'plotly-el'
+			# 	styles:{
+			# 		width:'600px'
+			# 		height: '250px'
+			# 	}
+			# }, 'charts-lol'
+
+			e Plot, plotlyConfig
+
+			# <div id="tester" style="width:600px;height:250px;"></div>
 
 			# e Iframe, {
 			# 	width: '100%'

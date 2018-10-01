@@ -10,7 +10,7 @@ import auth                 from 'data/auth/state'
 # Pages
 import configs from 'pages/configs'
 import files   from 'pages/files'
-import jobs    from 'pages/jobs'
+# import jobs    from 'pages/jobs'
 import charts  from 'pages/charts'
 import config  from 'containers/config-form'
 
