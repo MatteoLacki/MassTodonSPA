@@ -5,6 +5,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
 import drawer from 'data/ui/drawer'
+
 plotlyFromFile = require './orbi.json'
 plotlyFromFile2 = require './test.json'
 
@@ -29,6 +30,7 @@ export default createReactClass
 		plotlyFromFile.style =
 			width: '100%'
 			height: '900px'
+
 
 
 		# Which Plot to render
