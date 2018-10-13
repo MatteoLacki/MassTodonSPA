@@ -38,7 +38,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "mobx-react-devtools": "^6.0.2",
-    "@firebase/app-types": "^0.3.2"
+    "@firebase/app-types": "^0.3.2",
+    "mobx-react-devtools": "^6.0.2"
   }
 }

@@ -10,7 +10,7 @@ import auth                 from 'data/auth/state'
 # Pages
 import configs from 'pages/configs'
 import files   from 'pages/files'
-# import jobs    from 'pages/jobs'
+import jobs    from 'pages/jobs'
 import charts  from 'pages/charts'
 import config  from 'containers/config-form'
 
@@ -30,9 +30,8 @@ export default withRouter mobxReact.observer createReactClass
 				e MuiThemeProvider, { theme: theme },
 					if auth.state.isUserLoggedIn
 						e NavDrawer, {},
-							# e Route, { exact:true, path: '/', component: Dupa2}
 							e Route, { exact:true, path: '/files',       component: files }
-							# e Route, { exact:true, path: '/jobs',        component: jobs }
+							e Route, { exact:true, path: '/jobs',        component: jobs }
 							e Route, { exact:true, path: '/configs',     component: configs }
 							e Route, { exact:true, path: '/configs/add', component: config }
 							e Route, { exact:true, path: '/charts',      component: charts }
